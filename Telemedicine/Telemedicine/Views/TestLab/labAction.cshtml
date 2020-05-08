@@ -1,0 +1,223 @@
+﻿
+@{
+    ViewBag.Title = "labAction";
+    Layout = "~/Views/Shared/_TestLablayout.cshtml";
+}
+
+<h3>Action on Patient</h3>
+<br />
+
+<div class="panel panel-success cardinr">
+    <div class="panel-heading" style="padding: 5px 15px;">
+        Case No : 102 || Date : 02-May 2020
+    </div>
+
+    <div class="panel-body">
+        <div class="testinrdiv">
+            <div><h3>Patient Name</h3></div>
+            Anil Kumar
+        </div>
+        <div class="testinrdiv">
+            <div><h3>Mobile No</h3></div>
+            89678-89765
+        </div>
+        <div class="testinrdiv">
+            <div><h3>Age</h3></div>
+            45
+        </div>
+        <div class="testinrdiv">
+            <div><h3>Gender</h3></div>
+            Male
+        </div>
+
+
+        <div class="clearfix"></div>
+        <div class="panel-problem">
+            <div><h3>Patient Address :</h3></div>
+            H.NO 254, Near Shyam General Stores, Kalibadi, Raipur (C.G. )
+        </div>
+
+
+        <div class="clearfix"></div>
+        <div class="panel-problem">
+            <div><h3>Problem</h3></div>
+            पेट में दर्द  पेट का दर्द IBS अथवा आँत या पेट में जलन जैसे पाचनसंबंधी कारणों से होता है , और मिचली, उल्टी अथवा जुलाब जैसे अन्यलक्षण शामिल हो सकते हैं।</h3>
+        </div>
+
+        <div class="clearfix"></div>
+        <div class="panel-problem">
+            <div><strong>Type of Test : </strong><span>Complete blood count (CBC),Urine pH level test, Protein urine test,</span></div>
+        </div>
+
+        <div class="clearfix"></div>
+        <div class="panel-problem">
+            <div><h3>Instruction By Health Service Provider</h3></div>
+            There are blood tests advised to you to look for cause of your diagnosis.
+        </div>
+
+
+        <button type="button" style="margin-top: 8px;" class="btn btn-default pull-right" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <i data-feather="eye" style="max-height:15px"></i>View Attatchemtns
+        </button>
+
+        <button type="button" style="margin-top: 8px;" class="btn btn-default pull-right" data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <i data-feather="file-plus" style="max-height:15px"></i>Medical History
+        </button>
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                Attatchemtns 1
+                Attatchemtns 2
+
+            </div>
+        </div>
+        <div class="collapse" id="collapseExample1">
+            <div class="card card-body">
+                Medical History of patient
+
+            </div>
+        </div>
+        <hr />
+        <h4>Actions</h4>
+        <hr />
+
+
+        @*<button type="button" style="margin-top: 8px;" class="btn btn-default pull-right" data-toggle="modal" data-target=".call-patient">
+                <i data-feather="phone-call" style="max-height:15px"></i>Call Patient
+            </button>*@
+
+        <button type="button" style="margin-top: 8px;" class="btn btn-default pull-right" data-toggle="modal" data-target=".write-prescription">
+            <i data-feather="clock" style="max-height:15px"></i>Schedule to Collect Sample
+        </button>
+
+        <button type="button" style="margin-top: 8px;" class="btn btn-default pull-right" data-toggle="modal" data-target=".assign-doctor">
+            <i data-feather="file-text" style="max-height:15px"></i>Fill Report
+        </button>
+
+
+        @*<button type="button" style="margin-top: 8px;" class="btn btn-default pull-right" data-toggle="modal" data-target=".send-ambulance">Send Ambulance</button>*@
+
+
+        <button type="button" style="margin-top: 8px; float:right" class="btn btn-success pull-right" data-toggle="modal" data-target=".send-doctor">Generate & Send Report</button>
+
+
+    </div>
+
+
+    <div class="modal fade attachment" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Call Patient for Scheduling</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <textarea></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade write-prescription" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"> Schedule to Collect Sample</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <i data-feather="phone-call" style="max-height:15px"></i>Call Patient  : 89898-778788
+                    </div>
+                    <br />
+
+                    <div class="row">
+
+                        <div class="col-md-3">Prefer Date :</div>
+                        <div class="col-md-3">
+                            <div class="d-flex align-items-center flex-wrap text-nowrap">
+                                <div class="input-group date datepicker" id="datePickerExample">
+                                    <span class="input-group-addon bg-transparent"><i data-feather="calendar" class=" text-primary"></i></span>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">Prefer Time :</div>
+                        <div class="col-md-3">
+                            <div class="d-flex align-items-center flex-wrap text-nowrap">
+                                <div class="input-group date timepicker" id="datetimepickerExample" data-target-input="nearest">
+                                    <input type="text" class="form-control datetimepicker-input" data-target="#datetimepickerExample" value="02:20 PM" />
+                                    <div class="input-group-append" data-target="#datetimepickerExample" data-toggle="datetimepicker">
+                                        <div class="input-group-text"><i data-feather="clock"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-12">
+                            <textarea rows="3" class="form-control" id="Presc" placeholder="Enter Remark..."></textarea>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade assign-doctor" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Assign</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade send-ambulance" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Ambulance</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Call 108
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+

@@ -1,0 +1,122 @@
+﻿
+@{
+    ViewBag.Title = "addPatient";
+    Layout = "~/Views/Shared/_HSPlayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-title">पंजीकरण फॉर्म</h6>
+                @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+                {
+                    @*<div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="exampleInputText1" value="" placeholder="Enter Mobile Number...">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <button class="btn btn-primary" type="button">Send OTP</button>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="exampleInputText1" value="" placeholder="Enter OTP....">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <button class="btn btn-primary" type="button" id="verify">Verify</button>
+                            </div>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                    <hr style="color:#F9FAFB; display:none;" id="hr" />*@
+                    <div class="row" id="RegDet1">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="exampleInputText1">सदस्य का नाम</label>
+                                <input type="text" class="form-control" id="exampleInputText1" value="" placeholder="सदस्य का नाम">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">जन्म तिथि</label>
+                                <div class="input-group date datepicker" id="datePickerExample">
+                                    <input type="text" class="form-control"><span class="input-group-addon"><i data-feather="calendar"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">लिंग</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option selected disabled>[-- लिंग चुनें --]</option>
+                                    <option>पुरुष</option>
+                                    <option>महिला</option>
+                                    <option>अन्य</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="RegDet2">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="exampleInputText1" value="" placeholder="Enter Mobile Number...">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    @*<label for="exampleInputText1">पासवर्ड</label>*@
+                                    <input type="password" class="form-control" id="exampleInputText1" value="" placeholder="पासवर्ड">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    @*<label for="exampleInputText1">कंफ़र्म पासवर्ड</label>*@
+                                    <input type="password" class="form-control" id="exampleInputText1" value="" placeholder="कंफ़र्म पासवर्ड">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="RegDet3">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                @*<label for="exampleFormControlTextarea1">पता</label>*@
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="पता"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    @*<label for="exampleInputText1">Latitude</label>*@
+                                    <input type="password" class="form-control" id="exampleInputText1" value="" placeholder="Latitude">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    @*<label for="exampleInputText1">Longitude</label>*@
+                                    <input type="password" class="form-control" id="exampleInputText1" value="" placeholder="Longitude">
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                        <button class="btn btn-light" type="reset">Reset</button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+

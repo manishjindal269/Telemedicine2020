@@ -1,0 +1,183 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_Facilitylayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-title">Patient Search</h6>
+                @*@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+
+                    {*@
+                <form>
+                    <hr />
+                    <div class="row">
+
+                        <div class="col-md-4"></div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <input type="text" maxlength="10" class="form-control" id="exampleInputText1" value="" placeholder="Enter Mobile Number...">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <button class="btn btn-primary" id="MobSearch" type="button">Check</button>
+
+                                <button class="btn btn-outline-success" id="btnGenOTP" style="display:none" type="button">Generate OTP</button>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <p id="showNotFound" style="color:red;display:none;">not found !</p>
+                        </div>
+                    </div>
+
+
+                    <div id="showGetOTP" style="display:none">
+                        <div class="row">
+
+                            <div class="col-md-4"></div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <input type="text" maxlength="6" class="form-control" id="exampleinputtext1" value="" placeholder="Enter otp....">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <button class="btn btn-primary" id="btnVarify" type="button">Verify OTP</button>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <p id="showvarified" style="color:green;display:none">Vairfied</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button class="btn btn-outline-success center-block" id="btnCreate" type="button" style="display:none">Create New Patient</button>
+                        </div>
+                    </div>
+
+                    <div id="newRegister" style="display:none">
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputText1">सदस्य का नाम</label>
+                                    <input type="text" class="form-control" id="exampleInputText1" value="" placeholder="Enter Name">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect1">जन्म तिथि</label>
+                                    <div class="input-group date datepicker" id="datePickerExample">
+                                        <input type="text" class="form-control"><span class="input-group-addon"><i data-feather="calendar"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect1">लिंग</label>
+                                    <select class="form-control" id="exampleFormControlSelect1">
+                                        <option selected disabled>[-- लिंग चुनें --]</option>
+                                        <option>पुरुष</option>
+                                        <option>महिला</option>
+                                        <option>अन्य</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label for="exampleInputText1">Password</label>
+                                        <input type="password" class="form-control" id="exampleInputText1" value="" placeholder="Enter Name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label for="exampleInputText1">Confirm Password</label>
+                                        <input type="password" class="form-control" id="exampleInputText1" value="" placeholder="Enter Name">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Address</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label for="exampleInputText1">Latitude</label>
+                                        <input type="password" class="form-control" id="exampleInputText1" value="" placeholder="Enter Name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label for="exampleInputText1">Longitude</label>
+                                        <input type="password" class="form-control" id="exampleInputText1" value="" placeholder="Enter Name">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary mr-2 center-block">Submit</button>
+                            <button class="btn btn-light center-block">Cancel</button>
+
+                        </div>
+                    </div>
+                    @*}*@
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#MobSearch").click(function () {
+                $("#btnCreate").css("display", "none");
+                $("#showGetOTP").hide();
+                $("#showNotFound").show();
+                $("#btnGenOTP").show();
+
+            });
+
+            $("#btnGenOTP").click(function () {
+                $("#showVarified").hide();
+                $("#showGetOTP").show();
+                $("#btnGenOTP").hide();
+                $("#MobSearch").hide();
+                $("#showNotFound").hide();
+                $("#exampleInputText1").show();
+            });
+
+
+            $("#btnVarify").click(function () {
+                $("#showvarified").show();
+                $("#btnCreate").show();
+            });
+
+
+            $("#btnCreate").click(function () {
+                $("#newRegister").show();
+                $("#btnCreate").css("display", "none");
+            });
+        });
+
+    </script>
+}

@@ -1,0 +1,114 @@
+﻿<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-title">पंजीकरण फॉर्म</h6>
+                @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+                {
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="exampleInputText1" value="" placeholder="Enter Mobile Number...">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <button class="btn btn-primary" type="submit">Send OTP</button>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="exampleInputText1" value="" placeholder="Enter OTP....">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <button class="btn btn-primary" type="submit">Verify</button>
+                            </div>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="exampleInputText1">सदस्य का नाम</label>
+                                <input type="text" class="form-control" id="exampleInputText1" value="" placeholder="Enter Name">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">जन्म तिथि</label>
+                                <div class="input-group date datepicker" id="datePickerExample">
+                                    <input type="text" class="form-control"><span class="input-group-addon"><i data-feather="calendar"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">लिंग</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option selected disabled>[-- लिंग चुनें --]</option>
+                                    <option>पुरुष</option>
+                                    <option>महिला</option>
+                                    <option>अन्य</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label for="exampleInputText1">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputText1" value="" placeholder="Enter Name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label for="exampleInputText1">Confirm Password</label>
+                                    <input type="password" class="form-control" id="exampleInputText1" value="" placeholder="Enter Name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Address</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label for="exampleInputText1">Latitude</label>
+                                    <input type="password" class="form-control" id="exampleInputText1" value="" placeholder="Enter Name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label for="exampleInputText1">Longitude</label>
+                                    <input type="password" class="form-control" id="exampleInputText1" value="" placeholder="Enter Name">
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                        <button class="btn btn-light">Cancel</button>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</div>

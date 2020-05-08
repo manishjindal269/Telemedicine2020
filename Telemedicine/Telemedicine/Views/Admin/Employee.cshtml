@@ -1,0 +1,604 @@
+﻿
+@{
+    ViewBag.Title = "Employee";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+<style>
+    .headdiv {
+        display: inline-block;
+        width: 135px;
+        padding: 5px 0 5px 0;
+        text-align: center;
+        /*border-right: 1px solid #e9e9e9;*/
+    }
+</style>
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-title">
+                    Employee
+                    <button type="button" class="btn btn-primary btn-icon-text" style="float:right;" data-toggle="modal" data-target="#exampleModalLongScollable">
+                        <i class="btn-icon-prepend" data-feather="user-plus"></i>
+                        Add Employee
+                    </button>
+                </h6>
+
+                @using (Html.BeginForm())
+                {
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                @*<label for="exampleFormControlSelect1">User Type</label>*@
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option selected disabled>[-- Select District Name --]</option>
+                                    <option>All</option>
+                                    <option>Raipur</option>
+                                    <option>Bilaspur</option>
+                                    <option>Koria</option>
+                                    <option>Surajpur</option>
+                                    <option>Raigarh</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                @*<label for="exampleFormControlSelect1">User Type</label>*@
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option selected disabled>[-- Select Facility Type --]</option>
+                                    <option>All</option>
+                                    <option>DH</option>
+                                    <option>SDH</option>
+                                    <option>CHC</option>
+                                    <option>PHC</option>
+                                    <option>SHC</option>
+                                    <option>UPHC</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                @*<label for="exampleFormControlSelect1">User Type</label>*@
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option selected disabled>[-- Select Designation --]</option>
+                                    <option>All</option>
+                                    <option>Laboratory Technician(Regular)</option>
+                                    <option>Staff Nurse(Regular)</option>
+                                    <option>N M A(Regular)</option>
+                                    <option>Eye Assistant(Regular)</option>
+                                    <option>MPW-Female(Regular)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="panel panel-success cardinr">
+                            <div class="panel-heading" style="padding: 5px 15px;">
+                                <div class="headdiv">
+                                    Employee Id
+                                </div>
+                                <div class="headdiv">
+                                    Name
+                                </div>
+                                <div class="headdiv">
+                                    Gender
+                                </div>
+                                <div class="headdiv">
+                                    Mobile No.
+                                </div>
+                                <div class="headdiv">
+                                    Location
+                                </div>
+                                <div class="headdiv">
+                                    District
+                                </div>
+                                <div class="headdiv">
+                                    Designation
+                                </div>
+                                <div class="headdiv">
+                                    Action
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" style="padding: 5px 15px;">
+                                <div class="headdiv">
+                                    Emp0001
+                                </div>
+                                <div class="headdiv">
+                                    Shri. N.D. Khan
+                                </div>
+                                <div class="headdiv">
+                                    Male
+                                </div>
+                                <div class="headdiv">
+                                    9165442315
+                                </div>
+                                <div class="headdiv">
+                                    CHC Janakpur (Bharatpur)
+                                </div>
+                                <div class="headdiv">
+                                    Koria
+                                </div>
+                                <div class="headdiv">
+                                    Laboratory Technician(Regular)
+                                </div>
+                                <div class="headdiv">
+                                    <button class="btn btn-default" type="button"> View More..</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" style="padding: 5px 15px;">
+                                <div class="headdiv">
+                                    Emp0002
+                                </div>
+                                <div class="headdiv">
+                                    Ku. Sunit Ekka
+                                </div>
+                                <div class="headdiv">
+                                    Female
+                                </div>
+                                <div class="headdiv">
+                                    9406043606
+                                </div>
+                                <div class="headdiv">
+                                    DH KORIA
+                                </div>
+                                <div class="headdiv">
+                                    Koria
+                                </div>
+                                <div class="headdiv">
+                                    Staff Nurse
+                                    (Regular)
+                                </div>
+                                <div class="headdiv">
+                                    <button class="btn btn-default" type="button"> View More..</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" style="padding: 5px 15px;">
+                                <div class="headdiv">
+                                    Emp0003
+                                </div>
+                                <div class="headdiv">
+                                    Shri. N.D. Khan
+                                </div>
+                                <div class="headdiv">
+                                    Male
+                                </div>
+                                <div class="headdiv">
+                                    9165442315
+                                </div>
+                                <div class="headdiv">
+                                    CHC Janakpur (Bharatpur)
+                                </div>
+                                <div class="headdiv">
+                                    Koria
+                                </div>
+                                <div class="headdiv">
+                                    Laboratory Technician(Regular)
+                                </div>
+                                <div class="headdiv">
+                                    <button class="btn btn-default" type="button"> View More..</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" style="padding: 5px 15px;">
+                                <div class="headdiv">
+                                    Emp0004
+                                </div>
+                                <div class="headdiv">
+                                    Shri. N.D. Khan
+                                </div>
+                                <div class="headdiv">
+                                    Male
+                                </div>
+                                <div class="headdiv">
+                                    9165442315
+                                </div>
+                                <div class="headdiv">
+                                    CHC Janakpur (Bharatpur)
+                                </div>
+                                <div class="headdiv">
+                                    Koria
+                                </div>
+                                <div class="headdiv">
+                                    Laboratory Technician(Regular)
+                                </div>
+                                <div class="headdiv">
+                                    <button class="btn btn-default" type="button"> View More..</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" style="padding: 5px 15px;">
+                                <div class="headdiv">
+                                    Emp0005
+                                </div>
+                                <div class="headdiv">
+                                    Shri. N.D. Khan
+                                </div>
+                                <div class="headdiv">
+                                    Male
+                                </div>
+                                <div class="headdiv">
+                                    9165442315
+                                </div>
+                                <div class="headdiv">
+                                    CHC Janakpur (Bharatpur)
+                                </div>
+                                <div class="headdiv">
+                                    Koria
+                                </div>
+                                <div class="headdiv">
+                                    Laboratory Technician(Regular)
+                                </div>
+                                <div class="headdiv">
+                                    <button class="btn btn-default" type="button"> View More..</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" style="padding: 5px 15px;">
+                                <div class="headdiv">
+                                    Emp0006
+                                </div>
+                                <div class="headdiv">
+                                    Shri. N.D. Khan
+                                </div>
+                                <div class="headdiv">
+                                    Male
+                                </div>
+                                <div class="headdiv">
+                                    9165442315
+                                </div>
+                                <div class="headdiv">
+                                    CHC Janakpur (Bharatpur)
+                                </div>
+                                <div class="headdiv">
+                                    Koria
+                                </div>
+                                <div class="headdiv">
+                                    Laboratory Technician(Regular)
+                                </div>
+                                <div class="headdiv">
+                                    <button class="btn btn-default" type="button"> View More..</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" style="padding: 5px 15px;">
+                                <div class="headdiv">
+                                    Emp0007
+                                </div>
+                                <div class="headdiv">
+                                    Shri. N.D. Khan
+                                </div>
+                                <div class="headdiv">
+                                    Male
+                                </div>
+                                <div class="headdiv">
+                                    9165442315
+                                </div>
+                                <div class="headdiv">
+                                    CHC Janakpur (Bharatpur)
+                                </div>
+                                <div class="headdiv">
+                                    Koria
+                                </div>
+                                <div class="headdiv">
+                                    Laboratory Technician(Regular)
+                                </div>
+                                <div class="headdiv">
+                                    <button class="btn btn-default" type="button"> View More..</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" style="padding: 5px 15px;">
+                                <div class="headdiv">
+                                    Emp0008
+                                </div>
+                                <div class="headdiv">
+                                    Shri. N.D. Khan
+                                </div>
+                                <div class="headdiv">
+                                    Male
+                                </div>
+                                <div class="headdiv">
+                                    9165442315
+                                </div>
+                                <div class="headdiv">
+                                    CHC Janakpur (Bharatpur)
+                                </div>
+                                <div class="headdiv">
+                                    Koria
+                                </div>
+                                <div class="headdiv">
+                                    Laboratory Technician(Regular)
+                                </div>
+                                <div class="headdiv">
+                                    <button class="btn btn-default" type="button"> View More..</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" style="padding: 5px 15px;">
+                                <div class="headdiv">
+                                    Emp0009
+                                </div>
+                                <div class="headdiv">
+                                    Shri. N.D. Khan
+                                </div>
+                                <div class="headdiv">
+                                    Male
+                                </div>
+                                <div class="headdiv">
+                                    9165442315
+                                </div>
+                                <div class="headdiv">
+                                    CHC Janakpur (Bharatpur)
+                                </div>
+                                <div class="headdiv">
+                                    Koria
+                                </div>
+                                <div class="headdiv">
+                                    Laboratory Technician(Regular)
+                                </div>
+                                <div class="headdiv">
+                                    <button class="btn btn-default" type="button"> View More..</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" style="padding: 5px 15px;">
+                                <div class="headdiv">
+                                    Emp0010
+                                </div>
+                                <div class="headdiv">
+                                    Shri. N.D. Khan
+                                </div>
+                                <div class="headdiv">
+                                    Male
+                                </div>
+                                <div class="headdiv">
+                                    9165442315
+                                </div>
+                                <div class="headdiv">
+                                    CHC Janakpur (Bharatpur)
+                                </div>
+                                <div class="headdiv">
+                                    Koria
+                                </div>
+                                <div class="headdiv">
+                                    Laboratory Technician(Regular)
+                                </div>
+                                <div class="headdiv">
+                                    <button class="btn btn-default" type="button"> View More..</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="exampleModalLongScollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalScrollableTitle">Employee Registration</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                @*<h6 class="card-title">Inputs</h6>*@
+                                <form>
+                                    <div class="row">
+
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                @*<label for="exampleInputText1">Create User</label>*@
+                                                <input type="text" class="form-control" id="exampleInputText1" value="" placeholder="Enter Name...">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                @*<label for="exampleFormControlSelect1">Select Input</label>*@
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                    <option selected disabled>[-- Select Gender --]</option>
+                                                    <option>Male</option>
+                                                    <option>Female</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                @*<label for="exampleFormControlSelect1">Select Input</label>*@
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                    <option selected disabled>[-- Select Designation --]</option>
+                                                    <option>State Admin</option>
+                                                    <option>CMO</option>
+                                                    <option>DO</option>
+                                                    <option>Block Office</option>
+                                                    <option>Doctor</option>
+                                                    <option>Dean</option>
+                                                    <option>Peon</option>
+                                                    <option>Nurse</option>
+                                                    <option>ANM</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="row">
+
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                @*<label for="exampleFormControlSelect1">Select Input</label>*@
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                    <option selected disabled>[-- Select Qualification --]</option>
+                                                    <option>10Th</option>
+                                                    <option>12Th</option>
+                                                    <option>MBBS</option>
+                                                    <option>MD</option>
+                                                    <option>Deploma</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                @*<label for="exampleInputText1">Create User</label>*@
+                                                <input type="text" class="form-control" id="exampleInputText1" value="" placeholder="Enter Mobile Number...">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                @*<label for="exampleFormControlSelect1">Select Input</label>*@
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                    <option selected disabled>[-- Select District --]</option>
+                                                    <option>Raipur</option>
+                                                    <option>Bilaspur</option>
+                                                    <option>Durg</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                @*<label for="exampleInputText1">Create User</label>*@
+                                                <input type="text" class="form-control" id="exampleInputText1" value="" placeholder="Enter Email... amiahburton@gmail.com">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                @*<label for="exampleFormControlSelect1">Select Input</label>*@
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                    <option selected disabled>[-- Select Facility Type --]</option>
+                                                    <option>Raipur</option>
+                                                    <option>Bilaspur</option>
+                                                    <option>Durg</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                @*<label for="exampleFormControlSelect1">Select Input</label>*@
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                    <option selected disabled>[-- Select Facility Name --]</option>
+                                                    <option>Raipur</option>
+                                                    <option>Bilaspur</option>
+                                                    <option>Durg</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                @*<label>File upload</label>*@
+                                                <input type="file" name="img[]" class="file-upload-default">
+                                                <div class="input-group col-xs-12">
+                                                    <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
+                                                    <span class="input-group-append">
+                                                        <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                @*<label for="exampleFormControlSelect1">Select Input</label>*@
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                    <option selected disabled>[-- Select Job Type --]</option>
+                                                    <option>Regular</option>
+                                                    <option>Temprary</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                @*<label for="exampleFormControlTextarea1">पता</label>*@
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="पता"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <div class="form-group">
+                                                    @*<label for="exampleInputText1">Latitude</label>*@
+                                                    <input type="password" class="form-control" id="exampleInputText1" value="" placeholder="Latitude">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <div class="form-group">
+                                                    @*<label for="exampleInputText1">Longitude</label>*@
+                                                    <input type="password" class="form-control" id="exampleInputText1" value="" placeholder="Longitude">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
