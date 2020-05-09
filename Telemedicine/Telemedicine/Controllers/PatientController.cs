@@ -13,10 +13,6 @@ namespace Telemedicine.Controllers
         {
             return View();
         }
-        public ActionResult registration()
-        {
-            return View();
-        }
 
         public ActionResult PatientFamilyList()
         {
