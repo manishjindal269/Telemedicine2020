@@ -95,7 +95,7 @@
 
         <button type="button" style="margin-top: 8px;" class="btn btn-default pull-right" data-toggle="modal" data-target=".send-ambulance"><i data-feather="alert-circle" style="max-height:15px"></i>Send Ambulance</button>
 
-        <button type="button" style="margin-top: 8px; float:right" class="btn btn-success pull-right" data-toggle="modal" data-target=".send-doctor"><i data-feather="file-text" style="max-height:15px"></i>Generate & Send Report</button>
+        <button type="button" id="btnGenerate" style="margin-top: 8px; float:right" class="btn btn-success pull-right"><i data-feather="file-text" style="max-height:15px"></i>Generate & Send Report</button>
 
 
 
@@ -378,5 +378,13 @@
                 $("table tbody").append(markup);
             });
         });
-    </script>
+
+        
+        $(document).ready(function () {
+            $('#btnGenerate').click(function (e) {
+                window.location.href = '@Url.Content("/HelpDesk/generateReport")';
+            });
+        });
+  
+       </script>
 }
